@@ -1,4 +1,4 @@
-const connection = require('connection.js');
+const connection = require('../config/connection.js');
 //figure out the "?" variables and test the rest
 class Orm {
     constructor(dBase,column) {

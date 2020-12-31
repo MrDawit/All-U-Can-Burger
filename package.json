@@ -1,9 +1,10 @@
 {
-  "name": "All-U-Can-Burger",
+  "name": "all-u-can-burger",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "MVC app to enjoy burger creations",
+  "main": "server.js",
   "scripts": {
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,6 +19,7 @@
   },
   "homepage": "https://github.com/MrDawit/All-U-Can-Burger#readme",
   "dependencies": {
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "express-handlebars": "^5.2.0",
     "mysql": "^2.18.1"
