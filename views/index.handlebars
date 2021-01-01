@@ -1,21 +1,30 @@
-<h1>ALL U CAN BURGER</h1>
-
 <div class="container">
-<div class="row">
+  <div class="row">
     <div class="col-6">
-        <div class="form-group">
-              <label for="">Eat</label>
-              <input type="text" class="form-control" id="eat" placeholder="">
-            </div>
+      <div class="list-group">
+        <label for="">Eat</label>
+        {{!-- add EAT list items here --}}
+      </div>
     </div>
     <div class="col-6">
-        <div class="form-group">
-              <label for="">Ate</label>
-              <input type="text" class="form-control" id="ate" placeholder="">
-            </div>
+      <div class="list-group">
+        <label for="">Ate</label>
+        {{!-- add ATE list items here --}}
+      </div>
     </div>
+  </div>
 </div>
+<div class="container">
+  <div class="row">
+    <div class="col-4"></div>
+    <div class="col-4">
+      <div class="form-group">
+        <label for="">Add to Eat</label>
+        <input type="text" class="form-control" id="add" placeholder="Unique Burger Details">
+        <button type="submit" class="btn btn-primary btn-md" id="add-btn">
+              <span class="fa fa-book"></span> Add Ur Burger</button>
+      </div>
+    </div>
+    <div class="col-4"></div>
+  </div>
 </div>
-
-
-{{!-- button to submit the user input --}}

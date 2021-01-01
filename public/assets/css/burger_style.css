@@ -1,0 +1,28 @@
+body{
+    font-weight:bold;
+    background-color:rgb(202, 202, 14);
+}
+h1 {
+    text-align: center;
+    padding-top:center;
+    text-decoration: underline;
+    color: yellow;
+}
+#top_row{
+    /* width:80%; */
+    /* height:50% !important; */
+    background-color: purple;
+    background-image: url(../img/our_story_burger.png);
+    height: 400px;
+}
+.list-group{
+    text-align: center;
+    text-decoration: underline;
+    color:blue;
+    font-size:2vw;
+}
+.form-group{
+    text-align: center;
+    text-decoration: underline;
+
+}
