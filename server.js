@@ -2,11 +2,8 @@
 const express = require('express');
  const app = express();
 //  const path = require('path');
-
-
-// const burgerRouter = require("./controllers/burgers_controller");
+const burgerRouter = require("./controllers/burgers_controller");
 var PORT = process.env.PORT || 3030;
-// const Router = require('./controllers/burgers_controller.js');
 // var db = require("./models");
 
 var exphbs = require("express-handlebars");
@@ -28,13 +25,15 @@ app.set("view engine", "handlebars");
  // var Foo = require('./routes/html-routes');
 // Foo(app);
 app.use(express.static("public"));
-
+//for express.post
+// app.use(express.json()); 
 app.use(express.urlencoded({ extended: true }))
 
+  app.use("/",burgerRouter);
+//intitialization render location "/" and what to use "index"
 app.get("/", function (req, res) {
   res.render("index");
 });
-// app.use('/todo', burgerRouter)
 
 // db.sync().then(function(){
 
