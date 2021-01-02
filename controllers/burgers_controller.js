@@ -13,9 +13,10 @@ const router = express.Router();
  let burg=[];
  //first param for post is the location of these preceding actions
 router.post("/", (req, res, next) =>{
-   // burg = [];
+   //empty var (as obvious) will cause array to start off empty
+    //burg = [];
 burg.push(req.body.add);
-res.render('index',{title: 'BURGER list', burg})
+res.render("index",{burg})
 
 //ends the express method
 res.end;

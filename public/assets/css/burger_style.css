@@ -15,7 +15,7 @@ h1 {
     background-image: url(../img/our_story_burger.png);
     height: 400px;
 }
-.list-group{
+.list-group label{
     text-align: center;
     text-decoration: underline;
     color:blue;
