@@ -3,13 +3,17 @@
     <div class="col-6">
       <div class="list-group">
         <label>Eat</label>
-        
-     <div id="burgerList">
-{{!-- add EAT list items here --}}
-{{!-- {{title}} --}}
-{{burg}}
-     </div>
-     
+
+        <div id="burgerList">
+          {{!-- add EAT list items here --}}
+          <ul>
+            {{#each burg}}
+            <li>{{this}}</li>
+            {{/each}}
+          </ul>
+
+
+        </div>
       </div>
     </div>
     <div class="col-6">
@@ -29,7 +33,7 @@
         <label>Add to Eat</label>
         <input type="text" class="form-control" id="add" name="add" placeholder="Unique Burger Details">
         <button type="submit" class="btn btn-primary btn-md" id="add-btn">
-              <span class="fa fa-book"></span> Add Ur Burger</button>
+          <span class="fa fa-book"></span> Add Ur Burger</button>
       </form>
     </div>
     <div class="col-4"></div>

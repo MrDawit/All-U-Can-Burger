@@ -16,14 +16,14 @@ router.post("/", (req, res, next) =>{
    //empty var (as obvious) will cause array to start off empty
     //burg = [];
 burg.push(req.body.add);
-res.render("index")
-console.log("Puta ");
+res.render("index", {burg});
+console.log(...burg);
 //ends the express method
 res.end;
 //next();
 });
 
-console.log("PLEASE")
+console.log("PLEASE CODING GODS");
 
 //IF wishing to switch to a different page than the post page
 // router.use('/new', (req, res) => {
