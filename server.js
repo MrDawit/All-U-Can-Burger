@@ -19,21 +19,23 @@ app.set("view engine", "handlebars");
  
 // require('./routes/html-routes')(app);
 
-
+let burg=[];
  //require("./controllers/burgers_controller")(app);
 //other way to do import module. other than import from or using exports variable
  // var Foo = require('./routes/html-routes');
 // Foo(app);
 app.use(express.static("public"));
 //for express.post
-// app.use(express.json()); 
-app.use(express.urlencoded({ extended: true }))
-
-  app.use("/",burgerRouter);
+app.use(express.json()); 
+app.use(express.urlencoded({ extended: true }));
 //intitialization render location "/" and what to use "index"
 app.get("/", function (req, res) {
-  res.render("index");
+  res.render("index",{burg});
 });
+
+  app.use("/", burgerRouter);
+  
+
 
 // db.sync().then(function(){
 

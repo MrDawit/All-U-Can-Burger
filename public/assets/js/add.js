@@ -1,7 +1,7 @@
 
 // //so far app chooses add.js form function over post request on burgers_controllers
 // $("#add-btn").on("click", function (event) {
-//     event.preventDefault();
+    // event.preventDefault();
 
 // //     // let burg = {
 // //     //     name: $("#add").val().trim(),
@@ -27,7 +27,7 @@
 //     // $("#burgerList").append(`<p>${burg.name}</p>`);
 
 //     $("#add").val("");
-// //  });
+//  });
 // console.log("We got a Add...js?");
 
 

@@ -7,11 +7,11 @@
         <div id="burgerList">
           {{!-- add EAT list items here --}}
           <ul>
-            {{#each burg}}
+            {{#each burger}}
             <li>{{this}}</li>
             {{/each}}
           </ul>
-
+{{!-- {{burg}} --}}
 
         </div>
       </div>
@@ -31,7 +31,7 @@
       {{!-- method,action,name and type(submit) are all important parts of working post request --}}
       <form class="form-group" method="post" action="/">
         <label>Add to Eat</label>
-        <input type="text" class="form-control" id="add" name="add" placeholder="Unique Burger Details">
+        <input type="text" class="form-control" id="add" name="add" placeholder="Unique Burger Details" required>
         <button type="submit" class="btn btn-primary btn-md" id="add-btn">
           <span class="fa fa-book"></span> Add Ur Burger</button>
       </form>
@@ -40,5 +40,5 @@
   </div>
 </div>
 
-<script src="https://code.jquery.com/jquery.js"></script>
-<script src="../assets/js/add.js"></script>
+{{!-- <script src="https://code.jquery.com/jquery.js"></script> --}}
+{{!-- <script src="../assets/js/add.js"></script> --}}

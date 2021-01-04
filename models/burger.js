@@ -1,4 +1,6 @@
-// const orm = require('../config/orm');
+const Orm = require('../config/orm');
+
+//  require('../config/orm');
 // const db = {};
 
 
@@ -10,7 +12,9 @@
 //const config = require(__dirname + "./config/config.js")[env];
 
 //calling all Orm functions using burger specific inputs
+const adding = new Orm();
 
+adding.insertOne();
 
 
 
