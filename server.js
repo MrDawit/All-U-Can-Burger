@@ -19,22 +19,18 @@ app.set("view engine", "handlebars");
  
 // require('./routes/html-routes')(app);
 
-let burg=[];
+var burg={};
  //require("./controllers/burgers_controller")(app);
 //other way to do import module. other than import from or using exports variable
  // var Foo = require('./routes/html-routes');
 // Foo(app);
 app.use(express.static("public"));
 //for express.post
-app.use(express.json()); 
+app.use(express.json({limit: "1mb"})); 
 app.use(express.urlencoded({ extended: true }));
-//intitialization render location "/" and what to use "index"
-app.get("/", function (req, res) {
-  res.render("index",{burg});
-});
 
-  app.use("/", burgerRouter);
-  
+
+  //app.use("/", burgerRouter);
 
 
 // db.sync().then(function(){
@@ -44,3 +40,19 @@ app.get("/", function (req, res) {
     });
   
 //   });
+//intitialization render location "/" and what to use "index"
+app.get("/", function (req, res) {
+  res.render("index",{burg});
+});
+
+
+  //recieving post request from form data in add.js
+  app.post("/new", (req, res) => {
+    console.log(req.body.name);
+    const data = req.body;
+    res.json({
+      status: "success",
+      data: data,
+      specificData: req.body.name
+    });
+  })

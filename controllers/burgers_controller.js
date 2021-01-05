@@ -11,9 +11,15 @@ const burger = require('../models/burger.js');
 //IMPORTANT : router.post is not activated when add.js uses form data
 // };
 //  let burg=[];
- 
+
+
+
+//  FIND OUT WHY THIS POST REQUEST IS USED EVERYTIME THE SERVER SEES THIS FILE!
+//(MYSQL ADDS A ROW EVERYTIME I START OR RESTART APP!)
+
+
 //first param for post is the location of these preceding actions
-router.post("/", (req, res, next) =>{
+router.post("/api", (req, res, next) =>{
     // let burg=[];
    //empty var (as obvious) will cause array to start off empty
     // burg = [];
@@ -28,13 +34,18 @@ router.post("/", (req, res, next) =>{
 // //ends the express method
 // res.end;
 // //next();
-
-
+// myForm_data = req.body.add;
+console.log("burgers_controller: " + req);
 //router using db objects instead of direct form data
-res.render("index",{burger});
-res.end;
-console.log(burger);
 
+
+//res.render("index",{burger});
+
+
+//res.end;
+//console.log(burger);
+
+//console.log(res[3].burger_name);
 
 
 
