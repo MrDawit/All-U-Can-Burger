@@ -10,7 +10,7 @@ const burger = require('../models/burger.js');
 //     });
 //IMPORTANT : router.post is not activated when add.js uses form data
 // };
-//  let burg=[];
+ let burg=[];
 
 
 
@@ -18,9 +18,20 @@ const burger = require('../models/burger.js');
 //(MYSQL ADDS A ROW EVERYTIME I START OR RESTART APP!)
 
 
+ //recieving post request from form data in add.js
+//  app.post("/new", (req, res) => {
+//     console.log(req.body.name);
+//     const data = req.body;
+//     res.json({
+//       status: "success",
+//       data: data,
+//       specificData: req.body.name
+//     });
+//   })
+
 //first param for post is the location of these preceding actions
-router.post("/api", (req, res, next) =>{
-    // let burg=[];
+router.post("/new", (req, res, next) =>{
+    let burg=[];
    //empty var (as obvious) will cause array to start off empty
     // burg = [];
 
@@ -35,9 +46,17 @@ router.post("/api", (req, res, next) =>{
 // res.end;
 // //next();
 // myForm_data = req.body.add;
-console.log("burgers_controller: " + req);
+console.log("burgers_controller: " + req.body.name);
 //router using db objects instead of direct form data
 
+
+
+const data = req.body;
+    res.json({
+      status: "success",
+      data: data,
+      specificData: req.body.name
+    });
 
 //res.render("index",{burger});
 

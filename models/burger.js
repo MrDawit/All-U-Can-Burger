@@ -1,27 +1,27 @@
-// const Orm = require('../config/orm');
-// // const router = require('../controllers/burgers_controller');
+const Orm = require('../config/orm');
+// const router = require('../controllers/burgers_controller');
+require("dotenv").config();
+  require('../config/orm');
+// const db = {};
+
+
 // require("dotenv").config();
-//   require('../config/orm');
-// // const db = {};
+// const fs = require("fs");
+// const path = require("path");
+// const basename = path.basename(__filename);
+// const env = process.env.NODE_ENV || "production";
+//const config = require(__dirname + "./config/config.js")[env];
 
+//calling all Orm functions using burger specific inputs
+const adding = new Orm();
 
-// // require("dotenv").config();
-// // const fs = require("fs");
-// // const path = require("path");
-// // const basename = path.basename(__filename);
-// // const env = process.env.NODE_ENV || "production";
-// //const config = require(__dirname + "./config/config.js")[env];
+//adding.insertOne();
 
-// //calling all Orm functions using burger specific inputs
-// const adding = new Orm();
+adding.selectAll();
+// connection.connect(function(err) {
+//     if (err) throw err;
+//     adding.selectAll();
+//   });
 
-// //adding.insertOne();
-
-// adding.selectAll();
-// // connection.connect(function(err) {
-// //     if (err) throw err;
-// //     adding.selectAll();
-// //   });
-
-// adding.insertOne();
-//  // module.exports = add;
+adding.insertOne();
+ // module.exports = add;

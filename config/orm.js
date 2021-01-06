@@ -17,7 +17,7 @@ class Orm {
               if (err) throw err;
 
               // return res[3].burger_name;
-              console.log(res[3].burger_name);
+              console.log(res[2].burger_name);
             });
     };
     insertOne() {
@@ -44,4 +44,4 @@ class Orm {
 };
 
 
-// module.exports = Orm;
+ module.exports = Orm;

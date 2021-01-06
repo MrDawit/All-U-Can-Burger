@@ -30,7 +30,7 @@ app.use(express.json({limit: "1mb"}));
 app.use(express.urlencoded({ extended: true }));
 
 
-  //app.use("/", burgerRouter);
+  app.use("/", burgerRouter);
 
 
 // db.sync().then(function(){
@@ -47,12 +47,12 @@ app.get("/", function (req, res) {
 
 
   //recieving post request from form data in add.js
-  app.post("/new", (req, res) => {
-    console.log(req.body.name);
-    const data = req.body;
-    res.json({
-      status: "success",
-      data: data,
-      specificData: req.body.name
-    });
-  })
+  // app.post("/new", (req, res) => {
+  //   console.log(req.body.name);
+  //   const data = req.body;
+  //   res.json({
+  //     status: "success",
+  //     data: data,
+  //     specificData: req.body.name
+  //   });
+  // })
