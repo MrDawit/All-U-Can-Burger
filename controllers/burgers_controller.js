@@ -1,6 +1,14 @@
+const mysql = require("mysql");
+const config = require('../config/connection.js');
+const connection = mysql.createConnection(config);
+
+
+
 const express = require('express');
-const router = express.Router();
 const burger = require('../models/burger.js');
+const router = express.Router();
+//const burger = require('../models/burger.js');
+require('../models/burger.js');
 // const router = express();
 //router
 // module.exports =  function(app){
@@ -49,7 +57,8 @@ router.post("/new", (req, res, next) =>{
 console.log("burgers_controller: " + req.body.name);
 //router using db objects instead of direct form data
 
-
+//burger.showAll();
+//burger.addOne(0,'facts');
 
 const data = req.body;
     res.json({
@@ -57,6 +66,29 @@ const data = req.body;
       data: data,
       specificData: req.body.name
     });
+
+//works sans connection to html
+    // connection.query(burger.showAll(), (err, res) => {
+    //     if (err) throw err;
+    //     console.log(res);
+    //     res.send
+    //     res.render()
+    // });
+
+let burgerOne = req.body.name;
+    connection.query(burger.addOne()+`('${burgerOne}')`, (err, res) => {
+        if (err) throw err;
+        console.log(res);
+        console.log(burgerOne);
+        // res.send
+        // res.render()
+    });
+    // connection.query('SELECT burger_name FROM burgers_db.burgers', (err, res) => {
+    //     if (err) throw err;
+    //     console.log(res);
+    // });
+
+   //console.log(JSON.stringify(burger.showAll()));
 
 //res.render("index",{burger});
 
