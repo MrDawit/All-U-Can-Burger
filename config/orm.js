@@ -11,7 +11,11 @@ class Orm {
     this.myForm_data = myForm_data;
   };
   selectAll() {
-   return 'SELECT burger_name FROM burgers_db.burgers';
+    //Correct
+    return 'SELECT burger_name FROM burgers_db.burgers';
+    //TEST For server.js
+    //return 'INSERT INTO burgers_db.burgers (burger_name) VALUE ("MYLIFE")';
+    
     // connection.query('SELECT burger_name FROM burgers_db.burgers', (err, res) => {
     //   if (err) throw err;
     //   // let bgs = new Map(res);

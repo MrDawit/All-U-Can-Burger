@@ -87,24 +87,26 @@ router.post("/new", (req, res, next) => {
 
 
 const mainFunc = {
-    first: function () {
-        return connection.query(burger.showAll(), (err, res) => {
+    first: connection.query(burger.showAll(), (err, res) => {
             if (err) throw err;
             //IMPORTANT CONSOLE
 
             //console.log(res);
              
-            const burgerTRUE = res;
-            const conSole =console.log(burgerTRUE);
+            const burgerTRUE = res[2].burger_name;
+            //works for 1 result
+           //const conSole =console.log(burgerTRUE[2].burger_name);
+           const conSole =console.log(burgerTRUE);
+
             return {burgerTRUE, conSole};
             // console.log(burgerOne);
             // res.send
-            //  res.render('index', {burger})
+            //  res.render('index', {burgerTRUE})
         })
-    },
+    
 };
 
-mainFunc.first();
+//mainFunc.first();
 //IMPORTANT CONSOLE
 //console.log("PLEASE CODING GODS");
 

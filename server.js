@@ -19,7 +19,7 @@ app.set("view engine", "handlebars");
  
 // require('./routes/html-routes')(app);
 
-var burg={};
+//var burg="";
  //require("./controllers/burgers_controller")(app);
 //other way to do import module. other than import from or using exports variable
  // var Foo = require('./routes/html-routes');
@@ -31,7 +31,8 @@ app.use(express.urlencoded({ extended: true }));
 
 
   app.use("/", burgerRouter.router);
-
+ //let burg= burgerRouter.mainFunc;
+//console.log(burg.first);
 
 // db.sync().then(function(){
 
@@ -42,6 +43,9 @@ app.use(express.urlencoded({ extended: true }));
 //   });
 //intitialization render location "/" and what to use "index"
 app.get("/", function (req, res) {
+  let burg= burgerRouter.mainFunc.first;
+ // let burg2= JSON.stringify(burg);
+  console.log(burg);
   res.render("index",{burg});
 });
 
