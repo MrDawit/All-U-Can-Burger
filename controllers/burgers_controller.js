@@ -59,28 +59,22 @@ router.post("/new", (req, res, next) => {
 
     //let burgerTRUE = [];
 
-    const mainFunc = {
-        first: function () {
-            return connection.query(burger.showAll(), (err, res) => {
-                if (err) throw err;
-                //IMPORTANT CONSOLE
+    // const mainFunc = {
+    //     first: function () {
+    //         return connection.query(burger.showAll(), (err, res) => {
+    //             if (err) throw err;
+    //             //IMPORTANT CONSOLE
 
-                //console.log(res);
-                // const conSole =console.log(res);
-                const burgerTRUE = res;
-                return burgerTRUE;
-                // console.log(burgerOne);
-                // res.send
-                //  res.render('index', {burger})
-            })
-        },
-    };
-    const firstFirst = mainFunc.first();
-
-    firstFirst.then(function (burgerTRUE) {
-        console.log(burgerTRUE);
-        //console.log("123") ;
-    });
+    //             //console.log(res);
+    //             // const conSole =console.log(res);
+    //             const burgerTRUE = res;
+    //             return burgerTRUE;
+    //             // console.log(burgerOne);
+    //             // res.send
+    //             //  res.render('index', {burger})
+    //         })
+    //     },
+    // };
 
 
 
@@ -90,6 +84,27 @@ router.post("/new", (req, res, next) => {
 
 
 });
+
+
+const mainFunc = {
+    first: function () {
+        return connection.query(burger.showAll(), (err, res) => {
+            if (err) throw err;
+            //IMPORTANT CONSOLE
+
+            //console.log(res);
+             
+            const burgerTRUE = res;
+            const conSole =console.log(burgerTRUE);
+            return {burgerTRUE, conSole};
+            // console.log(burgerOne);
+            // res.send
+            //  res.render('index', {burger})
+        })
+    },
+};
+
+mainFunc.first();
 //IMPORTANT CONSOLE
 //console.log("PLEASE CODING GODS");
 
@@ -98,4 +113,4 @@ router.post("/new", (req, res, next) => {
 //console.log("THIS: " + burgerTRUE);
 
 
-module.exports = { router }
+module.exports = { router, mainFunc }
