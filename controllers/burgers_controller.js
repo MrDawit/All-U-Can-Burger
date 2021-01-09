@@ -49,7 +49,7 @@ router.post("/new", (req, res, next) => {
     let burgerOne = req.body.name;
     connection.query(burger.addOne() + `('${burgerOne}')`, (err, res) => {
         if (err) throw err;
-        
+
         // console.log(res);
         //  console.log(burgerOne);
         // res.send
@@ -86,24 +86,24 @@ router.post("/new", (req, res, next) => {
 });
 
 
-const mainFunc = {
-    first: connection.query(burger.showAll(), (err, res) => {
-            if (err) throw err;
-            //IMPORTANT CONSOLE
+const mainFunc = (fakeParam) => {
+    connection.query(burger.showAll(), (err, res) => {
+        if (err) throw err;
+        //IMPORTANT CONSOLE
 
-            //console.log(res);
-             
-            const burgerTRUE = res[2].burger_name;
-            //works for 1 result
-           //const conSole =console.log(burgerTRUE[2].burger_name);
-           const conSole =console.log(burgerTRUE);
+        //console.log(res);
+        let fakeParam= 2;
+        const burgerTRUE = res[2].burger_name;
+        //works for 1 result
+        //const conSole =console.log(burgerTRUE[2].burger_name);
+        // const conSole =console.log(burgerTRUE);
 
-            return {burgerTRUE, conSole};
-            // console.log(burgerOne);
-            // res.send
-            //  res.render('index', {burgerTRUE})
-        })
-    
+        return { burgerTRUE };
+        // console.log(burgerOne);
+        // res.send
+        //  res.render('index', {burgerTRUE})
+    })
+
 };
 
 //mainFunc.first();
@@ -115,4 +115,4 @@ const mainFunc = {
 //console.log("THIS: " + burgerTRUE);
 
 
-module.exports = { router, mainFunc }
+module.exports = { router }

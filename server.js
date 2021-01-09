@@ -1,3 +1,7 @@
+const mysql = require("mysql");
+const config = require('./config/connection.js');
+const connection = mysql.createConnection(config);
+
 
 const express = require('express');
  const app = express();
@@ -40,13 +44,84 @@ app.use(express.urlencoded({ extended: true }));
       console.log("App now listening at localhost:" + PORT);
     });
   
+
+  //   const mainFunc = (fakeParam) => {
+  //     connection.query(burger.showAll(), (err, res) => {
+  //         if (err) throw err;
+  //         //IMPORTANT CONSOLE
+  
+  //         //console.log(res);
+  //         let fakeParam= 2;
+  //         const burgerTRUE = res[2].burger_name;
+  //         //works for 1 result
+  //         //const conSole =console.log(burgerTRUE[2].burger_name);
+  //         // const conSole =console.log(burgerTRUE);
+  
+  //         return { burgerTRUE };
+  //         // console.log(burgerOne);
+  //         // res.send
+  //         //  res.render('index', {burgerTRUE})
+  //     })
+  
+  // };
+
+//   const simplerFunction = () => {
+//     connection.query(burger.showAll(), (err, res) => {
+//         if(err) throw err;
+//         //IMPORTANT CONSOLE
+
+//         //console.log(res);
+//       //  console.log("res: ", res);
+//         const burgerTRUE = res[2].burger_name;
+//         //works for 1 result
+//         //const conSole =console.log(burgerTRUE[2].burger_name);
+//       //  console.log("burgerTrue: ", burgerTRUE);
+//         //const conSole = console.log(burgerTRUE);
+//        // console.log("YOOOOO");
+//         return  burgerTRUE ;
+//         // console.log(burgerOne);
+//         // res.send
+//         //  res.render('index', {burgerTRUE})
+//     })
+// }
+//simplerFunction();
+
+
+
+
 //   });
 //intitialization render location "/" and what to use "index"
 app.get("/", function (req, res) {
-  let burg= burgerRouter.mainFunc.first;
+ // let burg= burgerRouter.mainFunc;
  // let burg2= JSON.stringify(burg);
-  console.log(burg);
-  res.render("index",{burg});
+
+
+ const simplerFunction = () => {
+  connection.query(burger.showAll(), (err, res) => {
+      if(err) throw err;
+      //IMPORTANT CONSOLE
+
+      //console.log(res);
+    //  console.log("res: ", res);
+      const burgerTRUE = res[2].burger_name;
+      //works for 1 result
+      //const conSole =console.log(burgerTRUE[2].burger_name);
+    //  console.log("burgerTrue: ", burgerTRUE);
+      //const conSole = console.log(burgerTRUE);
+     // console.log("YOOOOO");
+      return  burgerTRUE ;
+      // console.log(burgerOne);
+      // res.send
+      //  res.render('index', {burgerTRUE})
+  })
+}
+
+ //simplerFunction();
+ //console.log(burgerTRUE);
+
+ // console.log(mainFunc);
+//let burg2 = burg._results.burger_name;
+  res.render("index",{simplerFunction});
 });
 
 //console.log(burgerRouter.burgerTRUE);
