@@ -13,101 +13,28 @@ require('../models/burger.js');
 
 //let burgerTRUE = [];
 //first param for post is the location of these preceding actions
-router.post("/new", (req, res, next) => {
-
-    //empty var (as obvious) will cause array to start off empty
-    // burg = [];
-
-
-    // burg.push(req.body.add);
-    // res.render("index",{burg});
-    // console.log(burg);
-    // // console.log(req.body);
-    // // req.body=[];
-    //  console.log(req.body.add);
-    // //ends the express method
-    // res.end;
-    // //next();
-    // myForm_data = req.body.add;
-
-    //IMPORTANT CONSOLE
-    //console.log("burgers_controller: " + req.body.name);
-    //router using db objects instead of direct form data
-
-    //burger.showAll();
-    //burger.addOne(0,'facts');
+//START OF WORKING POST REQUEST
+// router.post("/new", (req, res, next) => {
+//     const data = req.body;
+//     res.json({
+//         status: "success",
+//         data: data,
+//         specificData: req.body.name
+//     });
+//     let burgerOne = req.body.name;
+//     connection.query(burger.addOne() + `('${burgerOne}')`, (err, res) => {
+//         if (err) throw err;   
+//     });
+// });
+//END
 
 
-
-
-
-
-
-    const data = req.body;
-    res.json({
-        status: "success",
-        data: data,
-        specificData: req.body.name
-    });
-
-
-
-    let burgerOne = req.body.name;
-    connection.query(burger.addOne() + `('${burgerOne}')`, (err, res) => {
-        if (err) throw err;
-        
-
-
-
-
-
-
-
-
-        // console.log(res);
-        //  console.log(burgerOne);
-        // res.send
-        // res.render()
-    });
-
-
-    //let burgerTRUE = [];
-
-    // const mainFunc = {
-    //     first: function () {
-    //         return connection.query(burger.showAll(), (err, res) => {
-    //             if (err) throw err;
-    //             //IMPORTANT CONSOLE
-
-    //             //console.log(res);
-    //             // const conSole =console.log(res);
-    //             const burgerTRUE = res;
-    //             return burgerTRUE;
-    //             // console.log(burgerOne);
-    //             // res.send
-    //             //  res.render('index', {burger})
-    //         })
-    //     },
-    // };
-
-
-
-
-    //console.log(burgerTRUE);
-    // console.log(res[3].burger_name);
-
-
-});
-
-
-const mainFunc = {
-    first: function(data){
       // connection.query(burger.showAll(), (err,data) => {
       //      if (err) throw err;
       //       //IMPORTANT CONSOLE
 
       //       //console.log(res);
-             
+           
       //      // const burgerTRUE = res[2].burger_name;
       //     // const burgerTRUE = data;
       //       //works for 1 result
@@ -117,15 +44,22 @@ const mainFunc = {
       //     //   burger: data
       //     // };
 
+      router.get("/", function (req, res) {
+        burger.showAll(function(burg){
+          res.render("index",{ cheese : burg });
+        }); 
+          console.log(res);
+          
+        });
+
+      
             // return {burgerTRUE};
-            console.log(burger.showAll(data));
-            return burger.showAll(data)
+            //console.log(burger.showAll(data));
+           // return burger.showAll(data)
             // console.log(burgerOne);
             // res.send
             //  res.render('index', {burgerTRUE})
-        }
-      
-}
+   
     
 
 
@@ -138,4 +72,4 @@ const mainFunc = {
 //console.log("THIS: " + burgerTRUE);
 
 
-module.exports = { router, mainFunc }
+module.exports = { router }

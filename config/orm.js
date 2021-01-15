@@ -1,7 +1,7 @@
 // const connection = require('../config/connection.js');
-
-const connection = require("./connection");
-
+const mysql= require('mysql');
+const config = require("./connection");
+const connection = mysql.createConnection(config);
 // require('dotenv').config();
 //figure out the "?" variables and test the rest
 
@@ -15,6 +15,7 @@ class Orm {
   selectAll(cb) {
     //Correct
     connection.query('SELECT burger_name FROM burgers_db.burgers', function(err,res){
+      if (err) throw err;
 cb(res);
     })
     // return 'SELECT burger_name FROM burgers_db.burgers';

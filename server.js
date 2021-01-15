@@ -47,15 +47,11 @@ app.use(express.urlencoded({ extended: true }));
   
 //   });
 //intitialization render location "/" and what to use "index"
-app.get("/", function (req, res) {
-  burgerRouter.mainFunc.first(function(burg){
-    console.log(burg);
-    res.render("index",{ cheese : burg });
-  });
+
   //let burg2= JSON.stringify(burg);
   
  
-});
+
 
 
 // app.get("/", function(req, res) {
