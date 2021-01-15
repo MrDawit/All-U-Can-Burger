@@ -37,12 +37,6 @@ router.post("/new", (req, res, next) => {
     //burger.showAll();
     //burger.addOne(0,'facts');
 
-
-
-
-
-
-
     const data = req.body;
     res.json({
         status: "success",
@@ -55,14 +49,6 @@ router.post("/new", (req, res, next) => {
     let burgerOne = req.body.name;
     connection.query(burger.addOne() + `('${burgerOne}')`, (err, res) => {
         if (err) throw err;
-        
-
-
-
-
-
-
-
 
         // console.log(res);
         //  console.log(burgerOne);
@@ -100,34 +86,25 @@ router.post("/new", (req, res, next) => {
 });
 
 
-const mainFunc = {
-    first: function(data){
-      // connection.query(burger.showAll(), (err,data) => {
-      //      if (err) throw err;
-      //       //IMPORTANT CONSOLE
+const mainFunc = (fakeParam) => {
+    connection.query(burger.showAll(), (err, res) => {
+        if (err) throw err;
+        //IMPORTANT CONSOLE
 
-      //       //console.log(res);
-             
-      //      // const burgerTRUE = res[2].burger_name;
-      //     // const burgerTRUE = data;
-      //       //works for 1 result
-      //      //const conSole =console.log(burgerTRUE[2].burger_name);
-      //     // const conSole =console.log(burgerTRUE);
-      //     // burgerTRUE = {
-      //     //   burger: data
-      //     // };
+        //console.log(res);
+        let fakeParam= 2;
+        const burgerTRUE = res[2].burger_name;
+        //works for 1 result
+        //const conSole =console.log(burgerTRUE[2].burger_name);
+        // const conSole =console.log(burgerTRUE);
 
-            // return {burgerTRUE};
-            console.log(burger.showAll(data));
-            return burger.showAll(data)
-            // console.log(burgerOne);
-            // res.send
-            //  res.render('index', {burgerTRUE})
-        }
-      
-}
-    
+        return { burgerTRUE };
+        // console.log(burgerOne);
+        // res.send
+        //  res.render('index', {burgerTRUE})
+    })
 
+};
 
 //mainFunc.first();
 //IMPORTANT CONSOLE
@@ -138,4 +115,4 @@ const mainFunc = {
 //console.log("THIS: " + burgerTRUE);
 
 
-module.exports = { router, mainFunc }
+module.exports = { router }

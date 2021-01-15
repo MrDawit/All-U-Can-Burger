@@ -11,9 +11,11 @@ require('../config/orm');
 //const adding = new Orm();
 
 var burger = {
-    showAll: () => {
+    showAll: (cb) => {
         const adding = new Orm();
-       return adding.selectAll();
+       return adding.selectAll(function(res){
+           cb(res);
+       });
       
     },
     addOne: () => {

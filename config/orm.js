@@ -1,5 +1,7 @@
 // const connection = require('../config/connection.js');
 
+const connection = require("./connection");
+
 // require('dotenv').config();
 //figure out the "?" variables and test the rest
 
@@ -10,9 +12,12 @@ class Orm {
     this.column = column;
     this.myForm_data = myForm_data;
   };
-  selectAll() {
+  selectAll(cb) {
     //Correct
-    return 'SELECT burger_name FROM burgers_db.burgers';
+    connection.query('SELECT burger_name FROM burgers_db.burgers', function(err,res){
+cb(res);
+    })
+    // return 'SELECT burger_name FROM burgers_db.burgers';
     //TEST For server.js
     //return 'INSERT INTO burgers_db.burgers (burger_name) VALUE ("MYLIFE")';
     
