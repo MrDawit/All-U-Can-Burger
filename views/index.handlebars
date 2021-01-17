@@ -10,13 +10,13 @@
 
           <ol>
             {{#each bestBurger}}
-            {{#if devoured}}
+            {{#unless devoured}}
             <li>{{burger_name}}
               <button type="submit" class="btn btn-warning btn-sm devourBtn" data-id="{{id}}">
                 Devour It!
               </button>
             </li>
-            {{/if}}
+            {{/unless}}
             {{/each}}
           </ol>
 
@@ -32,11 +32,11 @@
           {{!-- add ATE list items here --}}
           <ol>
             {{#each bestBurger}}
-            {{#unless devoured}}
+            {{#if devoured}}
             <li>
               {{burger_name}}
             </li>
-            {{/unless}}
+            {{/if}}
             {{/each}}
           </ol>
 
@@ -51,10 +51,12 @@
     <div class="col-4">
       {{!-- method,action,name and type(submit) are all important parts of working post request --}}
       <form class="form-group" method="post" action="/new">
-        <label>Add Ur Burger</label>
-        <input type="text" class="form-control" id="add" name="add" placeholder="Unique Burger Details" required>
+        
+        
         <button type="submit" class="btn btn-primary btn-md" id="add-btn">
-          <span class="fa fa-book"></span> To Hungry</button>
+          <span class="fa fa-book"></span> Add Ur Burger</button>
+          <input type="text" class="form-control" id="add" name="add" placeholder="Unique Burger Details" required>
+          <label>To Hungry</label>
       </form>
     </div>
     <div class="col-4"></div>

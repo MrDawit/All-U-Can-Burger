@@ -67,34 +67,34 @@ $("#add-btn").on("click", (event) => {
 
 
 
-    $("#add-btn").on("click", (event) => {
-        event.preventDefault();
+    // $("#devour-btn").on("click", (event) => {
+    //     event.preventDefault();
     
-        async function clientSideBurger() {
-            const addBurger = {
-                name: $("#add").val(),
-            };
+    //     async function clientSideAteBurger() {
+    //         const ateBurger = {
+    //             name: $("#devour").val(),
+    //         };
     
-            const options = {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify(addBurger)
-            };
+    //         const options = {
+    //             method: "POST",
+    //             headers: {
+    //                 "Content-Type": "application/json"
+    //             },
+    //             body: JSON.stringify(ateBurger)
+    //         };
     
-            //  fetch("/new", options).then(response => {
-            //     console.log(response);
-            // });
+    //         //  fetch("/new", options).then(response => {
+    //         //     console.log(response);
+    //         // });
     
-            const response = await fetch("/new", options);
-            const newBurgerJson = await response.json();
-            console.log(newBurgerJson);
-            location.reload();
-        };
+    //         const response = await fetch("/new", options);
+    //         const bellyBurgerJson = await response.json();
+    //         console.log(bellyBurgerJson);
+    //         location.reload();
+    //     };
     
-        //calling async function
-        clientSideBurger();
+    //     //calling async function
+    //     clientSideAteBurger();
 
 
 
