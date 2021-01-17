@@ -35,6 +35,8 @@ Project Live Link:
 ![](https://img.shields.io/badge/-express-handlebars-blue)
 ![](https://img.shields.io/badge/-dotenv-purple)
 
+*After Installs run "schema.sql"(db folder)
+
 ## Usage Notes
 * 
 

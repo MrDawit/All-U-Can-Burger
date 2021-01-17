@@ -12,12 +12,20 @@ class Orm {
     this.column = column;
     this.myForm_data = myForm_data;
   };
-  selectAll(cb) {
-    //Correct
-    connection.query('SELECT burger_name FROM burgers_db.burgers', function(err,res){
-      if (err) throw err;
+//   selectAll(cb) {
+//    
+//     connection.query('SELECT burger_name FROM burgers_db.burgers', function(err,res){
+//       if (err) throw err;
+// cb(res);
+//     })
+
+selectAll(cb) {
+  //Correct
+  connection.query('SELECT * FROM burgers_db.burgers', function(err,res){
+    if (err) throw err;
 cb(res);
-    })
+  })
+
     // return 'SELECT burger_name FROM burgers_db.burgers';
     //TEST For server.js
     //return 'INSERT INTO burgers_db.burgers (burger_name) VALUE ("MYLIFE")';
