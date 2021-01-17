@@ -3,8 +3,8 @@
 $("#add-btn").on("click", (event) => {
     event.preventDefault();
 
-    async function burFun() {
-        const bur = {
+    async function clientSideBurger() {
+        const addBurger = {
             name: $("#add").val(),
         };
 
@@ -13,7 +13,7 @@ $("#add-btn").on("click", (event) => {
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(bur)
+            body: JSON.stringify(addBurger)
         };
 
         //  fetch("/new", options).then(response => {
@@ -21,12 +21,13 @@ $("#add-btn").on("click", (event) => {
         // });
 
         const response = await fetch("/new", options);
-        const json = await response.json();
-        console.log(json);
+        const newBurgerJson = await response.json();
+        console.log(newBurgerJson);
+        location.reload();
     };
 
     //calling async function
-    burFun();
+    clientSideBurger();
 
 
 

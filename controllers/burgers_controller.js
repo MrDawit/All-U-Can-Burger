@@ -14,18 +14,21 @@ require('../models/burger.js');
 //let burgerTRUE = [];
 //first param for post is the location of these preceding actions
 //START OF WORKING POST REQUEST
-// router.post("/new", (req, res, next) => {
-//     const data = req.body;
-//     res.json({
-//         status: "success",
-//         data: data,
-//         specificData: req.body.name
-//     });
-//     let burgerOne = req.body.name;
-//     connection.query(burger.addOne() + `('${burgerOne}')`, (err, res) => {
-//         if (err) throw err;   
-//     });
-// });
+router.post("/new", (req, res, next) => {
+    const data = req.body;
+    res.json({
+        status: "success",
+        data: data,
+        specificData: req.body.name
+    });
+    let burgerOne = req.body.name;
+    connection.query(burger.addOne() + `('${burgerOne}')`, (err, res) => {
+        if (err) throw err;   
+    });
+    
+      
+    
+});
 //END
 
 

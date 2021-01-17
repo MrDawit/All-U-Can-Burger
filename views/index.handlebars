@@ -5,14 +5,25 @@
         <label>Eat</label>
 
         <div id="burgerList">
-          {{!-- add EAT list items here --}}
+          {{!-- add EAT list items here 
+
+{{#each cheese}}
+
+ 
+<li>{{this.burger_name}},{{this.devoured}}</li>
+
+{{/each}}--}}
 
 
-<ul>
-  {{#each cheese}}
-<li>{{this.burger_name}}</li>
+{{#each cheese}}
+
+ 
+<li>{{burger_name}}</li>
+
 {{/each}}
-</ul>
+
+
+
 
 
 
