@@ -15,14 +15,40 @@ h1 {
     background-image: url(../img/our_story_burger.png);
     height: 400px;
 }
+#page-title{
+    font-family: monospace;
+    font-weight: bolder;
+    /* border-bottom-left-radius: 30%;
+    border-bottom-right-radius: 30%;
+    border:solid; */
+}
+#burgerList{
+    border-style: double;
+    background-image: linear-gradient(to right, rgb(189, 5, 149) , yellow);
+}
+
 .list-group label{
     text-align: center;
     text-decoration: underline;
-    color:blue;
+    color:rgb(255, 251, 17);
     font-size:2vw;
+    background: black;
 }
 .form-group{
     text-align: center;
     text-decoration: underline;
-
+}
+form  {
+    border-top-left-radius: 40%;
+    border-top-right-radius: 40%;
+    border-style: solid;
+    background-color: black;
+    color:yellow;
+}
+#add-btn{
+    background:purple;
+}
+#devourList{
+    border-style: double;
+    background-image: linear-gradient(to left, rgb(189, 5, 149) , yellow);
 }

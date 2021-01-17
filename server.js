@@ -13,7 +13,7 @@ var PORT = process.env.PORT || 3030;
 // var db = require("./models");
 var exphbs = require("express-handlebars");
 // const burger = require('./models/burger');
-
+//change to "ext : handlebars"
  app.engine("handlebars", exphbs({defaultLayout: "main" }));
 // app.engine("handlebars", exphbs({ defaultLayout: "main" , layoutsDir: __dirname + "/views/layouts"}));
 //  app.set('views', path.join(__dirname,'/views'));

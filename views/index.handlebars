@@ -2,42 +2,45 @@
   <div class="row">
     <div class="col-6">
       <div class="list-group">
-        <label>Eat</label>
+        <label>Hungry</label>
 
         <div id="burgerList">
-          {{!-- add EAT list items here 
-
-{{#each cheese}}
-
- 
-<li>{{this.burger_name}},{{this.devoured}}</li>
-
-{{/each}}--}}
+          {{!-- add EAT list items here--}}
 
 
-{{#each cheese}}
+          <ol>
+            {{#each bestBurger}}
+            {{#unless devoured}}
+            <li>{{burger_name}}
+              <button type="submit" class="btn btn-warning btn-sm devourBtn" data-id="{{id}}">
+                Devour It!
+              </button>
+            </li>
+            {{/unless}}
+            {{/each}}
+          </ol>
 
- 
-<li>{{burger_name}}</li>
-
-{{/each}}
-
-
-
-
-
-
-
-
-          
 
         </div>
       </div>
     </div>
     <div class="col-6">
       <div class="list-group">
-        <label>Ate</label>
-        {{!-- add ATE list items here --}}
+        <label>Less Hungry...maybe Full</label>
+        <div id="devourList">
+
+          {{!-- add ATE list items here --}}
+          <ol>
+            {{#each bestBurger}}
+            {{#unless devoured}}
+            <li>
+              {{burger_name}}
+            </li>
+            {{/unless}}
+            {{/each}}
+          </ol>
+
+        </div>
       </div>
     </div>
   </div>
@@ -48,15 +51,15 @@
     <div class="col-4">
       {{!-- method,action,name and type(submit) are all important parts of working post request --}}
       <form class="form-group" method="post" action="/new">
-        <label>Add to Eat</label>
+        <label>Add Ur Burger</label>
         <input type="text" class="form-control" id="add" name="add" placeholder="Unique Burger Details" required>
         <button type="submit" class="btn btn-primary btn-md" id="add-btn">
-          <span class="fa fa-book"></span> Add Ur Burger</button>
+          <span class="fa fa-book"></span> To Hungry</button>
       </form>
     </div>
     <div class="col-4"></div>
   </div>
 </div>
 
-<script src="https://code.jquery.com/jquery.js"></script> 
- <script src="../assets/js/add.js"></script>
+<script src="https://code.jquery.com/jquery.js"></script>
+<script src="../assets/js/add.js"></script>

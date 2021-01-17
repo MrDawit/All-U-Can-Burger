@@ -26,12 +26,24 @@ router.post("/new", (req, res, next) => {
         if (err) throw err;   
     });
     
-      
-    
 });
 //END
 
+router.get("/", function(req, res){
+  burger.showAll(function(data){
+      res.render("index", {bestBurger: data});
+  });
+});
 
+
+// router.get("/", function(req, res){
+//   burger.selectAll(function(data){
+//       var burgerObj = {
+//           burgers: data
+//       };
+//       res.render("index", burgerObj);
+//   });
+// });
       // connection.query(burger.showAll(), (err,data) => {
       //      if (err) throw err;
       //       //IMPORTANT CONSOLE
@@ -46,14 +58,27 @@ router.post("/new", (req, res, next) => {
       //     // burgerTRUE = {
       //     //   burger: data
       //     // };
+      
+      // WORKS IN SIMPLE EXTRACTION OF DATA
+      // router.get("/", function (req, res) {
+      //   burger.showAll(function(burg){
+      //     res.render("index",{ cheese : burg });
+      //   }); 
+      //     console.log(res.body);
+      //   });
+      //END
 
-      router.get("/", function (req, res) {
-        burger.showAll(function(burg){
-          res.render("index",{ cheese : burg });
-        }); 
-          console.log(res);
-          
-        });
+    //   router.get("/", function(req, res) {
+    //     console.log("Route Path Hit");
+    //     burger.showAll((data) => {
+    //       handlebarsObject = {
+    //         burger: data
+    //       };
+    //       console.log("Diplayed Burgers");
+    //       res.render("index", handlebarsObject);
+    //     });
+    
+    // });
 
       
             // return {burgerTRUE};
