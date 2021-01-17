@@ -10,13 +10,13 @@
 
           <ol>
             {{#each bestBurger}}
-            {{#unless devoured}}
+            {{#if devoured}}
             <li>{{burger_name}}
               <button type="submit" class="btn btn-warning btn-sm devourBtn" data-id="{{id}}">
                 Devour It!
               </button>
             </li>
-            {{/unless}}
+            {{/if}}
             {{/each}}
           </ol>
 
