@@ -35,11 +35,12 @@ Project Live Link:
 ![](https://img.shields.io/badge/-express-handlebars-blue)
 ![](https://img.shields.io/badge/-dotenv-purple)
 
-*After Installs run "schema.sql"(db folder)
+* After Install: run "schema.sql"(inside db folder)
 
 ## Usage Notes
-* 
-
+* Either run "seeds.sql"(inside db folder), or add your own burgers using the "Add Ur Burger" button
+* Move your burgers from the "Hungry" column to the "Less Hungry" column by clicking the burger's "Devour It!" button
+* Watch TV or excersice after 20 minutes, your choice!
 
 ## Created By
 [MrDawit Shalom Dawit](https://github.com/MrDawit) \
