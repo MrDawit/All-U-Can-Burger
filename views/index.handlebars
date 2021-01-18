@@ -38,7 +38,7 @@
             {{#if devoured}}
             <li>
               {{burger_name}}
-               <button type="submit" class="btn btn-danger btn-sm delete-btn" id="delete-btn" data-id={{id}}>
+              <button type="submit" class="btn btn-danger btn-sm delete-btn" id="delete-btn" data-id={{id}}>
                 Throw It Up!
               </button>
             </li>
@@ -57,12 +57,12 @@
     <div class="col-4">
       {{!-- method,action,name and type(submit) are all important parts of working post request --}}
       <form class="form-group" method="post" action="/new">
-        
-        
+
+
         <button type="submit" class="btn btn-primary btn-md" id="add-btn">
           <span class="fa fa-book"></span> Add Ur Burger</button>
-          <input type="text" class="form-control" id="add" name="add" placeholder="Unique Burger Details" required>
-          <label>To Hungry List</label>
+        <input type="text" class="form-control" id="add" name="add" placeholder="Unique Burger Details" required>
+        <label>To Hungry List</label>
       </form>
     </div>
     <div class="col-4"></div>
@@ -70,4 +70,4 @@
 </div>
 
 <script src="https://code.jquery.com/jquery.js"></script>
-<script src="../assets/js/add.js"></script>
+<script src="../assets/js/frontend.js"></script>
