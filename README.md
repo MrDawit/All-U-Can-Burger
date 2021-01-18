@@ -9,7 +9,7 @@
 ![](https://img.shields.io/badge/Made%20with-Javascript-green)
 ![](https://camo.githubusercontent.com/cec92673ea713fa89ba2ae2033daf5851f6f39393ff5b93231aa707d424638d9/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f2d4e6f64656a732d626c61636b3f7374796c653d666c61742d737175617265266c6f676f3d4e6f64652e6a73)
 ![](https://img.shields.io/badge/-MYSQL-red)
-![](https://img.shields.io/badge/-Express-Handlebars-orange)
+![](https://img.shields.io/badge/-ExpressHandlebars-orange)
 
 An app to organize burger ideas whether they belong to your dreams or on the table!
 
@@ -36,7 +36,7 @@ Project Live Link: https://all-u-can-burger.herokuapp.com/
 ![](https://camo.githubusercontent.com/e1840b4e176feb06e47500d5d74d65041ac3f193192174097956f2bea2ceea5f/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f2d4d7953514c2d4632393131313f7374796c653d666c61742d737175617265266c6f676f3d4d7953514c266c6f676f436f6c6f723d7768697465)
 ![](https://img.shields.io/badge/-mysql-red)
 ![](https://img.shields.io/badge/-express-orange)
-![](https://img.shields.io/badge/-express-handlebars-blue)
+![](https://img.shields.io/badge/-expressHandlebars-blue)
 ![](https://img.shields.io/badge/-dotenv-purple)
 
 * After Install: run "schema.sql"(inside db folder)
