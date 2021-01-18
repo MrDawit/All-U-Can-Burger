@@ -21,6 +21,7 @@ cb(res);
   })
 
   };
+
   insertOne() {
    
     return 'INSERT INTO burgers_db.burgers (burger_name) VALUE ';
@@ -38,12 +39,12 @@ cb(res);
 
   removeOne(value,cb){
     // DELETE FROM `burgers_db`.`burgers` WHERE (`id` = '14');
-    connection.query("DELETE FROM burgers_db.burgers WHERE ? ",[col,value], (err, res) => {
+    connection.query("DELETE FROM burgers_db.burgers WHERE ? ",[value], (err, res) => {
       if (err) throw err;
       cb(res);
     });
 
-  }
+  };
 
 };
 

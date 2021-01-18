@@ -13,10 +13,10 @@ require('../config/orm');
 var burger = {
     showAll: (cb) => {
         const adding = new Orm();
-       return adding.selectAll(function(res){
-           cb(res);
-       });
-      
+        return adding.selectAll(function (res) {
+            cb(res);
+        });
+
     },
     addOne: () => {
         //var burgerOne = await[`'${req.body.name}'`];
@@ -27,10 +27,16 @@ var burger = {
     },
     changeOne: (col, value, cb) => {
         const adding = new Orm();
-        return adding.updateOne(col, value, function(res){
-                    cb(res);
-        })
-    }
+        return adding.updateOne(col, value, function (res) {
+            cb(res);
+        });
+    },
+    deleteOne: (value, cb) => {
+        const adding = new Orm();
+        return adding.removeOne(value, function (res) {
+            cb(res);
+        });
+    },
 };
 
 module.exports = burger;
