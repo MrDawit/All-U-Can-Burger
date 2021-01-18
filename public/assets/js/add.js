@@ -39,15 +39,23 @@ $("#add-btn").on("click", (event) => {
 console.log("We got a Add...js2?");
 
 //PUT request when "devour it" button is clicked
-$(".devour-btn").on("click", (event) => {
+//  $(document).on("click","#devour-btn", (event) => {
+     $(".devour-btn").on("click", function(event) {
     event.preventDefault();
     var id = $(this).data("id");
-
+    //var id = $(this).attr("data-id");
+   // console.log(`This is the id : ${id}`);
+   console.log(id);
     $.ajax("/new/" + id, {
         type: "PUT",
+        success: function(result) {
+            console.log(result);
+            console.log(id);
+        }
     }).then(
         function () {
-            console.log("please,just a little bit more");
+           // console.log(id);
+            console.log(`please,just a little bit more ${id}`);
             location.reload();
         }
     );

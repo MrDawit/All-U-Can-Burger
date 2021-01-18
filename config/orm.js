@@ -26,7 +26,7 @@ cb(res);
     return 'INSERT INTO burgers_db.burgers (burger_name) VALUE ';
     // });
   };
-  // fix 
+  
   updateOne(col,value,cb) {
 
     connection.query("UPDATE burgers_db.burgers SET ? WHERE ? ",[col,value], (err, res) => {
@@ -35,6 +35,15 @@ cb(res);
     });
 
   };
+
+  removeOne(value,cb){
+    // DELETE FROM `burgers_db`.`burgers` WHERE (`id` = '14');
+    connection.query("DELETE FROM burgers_db.burgers WHERE ? ",[col,value], (err, res) => {
+      if (err) throw err;
+      cb(res);
+    });
+
+  }
 
 };
 
