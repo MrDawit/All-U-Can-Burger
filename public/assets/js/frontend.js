@@ -1,4 +1,4 @@
-
+//try to remove line 3 (along with line 18) inorder to get page refresh
 $("#add-btn").on("click", (event) => {
     event.preventDefault();
     async function clientSideBurger() {
@@ -16,6 +16,7 @@ $("#add-btn").on("click", (event) => {
         const newBurgerJson = await response.json();
         console.log(newBurgerJson);
         location.reload();
+        $("#add").val("");
     };
     clientSideBurger();
 });
@@ -23,7 +24,7 @@ $("#add-btn").on("click", (event) => {
 //PUT request when "devour it" button is clicked
 $(".devour-btn").on("click", function (event) {
     event.preventDefault();
-    var id = $(this).data("id");
+    let id = $(this).data("id");
     console.log(`This is the devoured burger's id: ${id}`);
     $.ajax("/new/" + id, {
         type: "PUT",
@@ -43,7 +44,7 @@ $(".devour-btn").on("click", function (event) {
 //DELETE request when "throw it up" button is clicked
 $(".delete-btn").on("click", function (event) {
     event.preventDefault();
-    var id = $(this).data("id");
+    let id = $(this).data("id");
     //var id = $(this).attr("data-id");
     console.log(`This is the deleted row's id : ${id}`);
     $.ajax("/new/" + id, {
