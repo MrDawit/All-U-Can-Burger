@@ -1,10 +1,12 @@
 
-const mysql = require('mysql');
-const config = require("./connection");
-const connection = mysql.createConnection(config);
+//const mysql = require('mysql');
+// const config = require("./connection");
+// const connection = mysql.createConnection(config);
+
+const connection= require("./connection");
 
 //figure out the "?" variables and test the rest
-
+//keep connection for ALL queries or NONE on this page. be consistent(to be done later)
 class Orm {
   constructor(column, myForm_data) {
     this.column = column;
@@ -12,6 +14,7 @@ class Orm {
   };
 
   selectAll(cb) {
+    
     connection.query('SELECT * FROM burgers_db.burgers', function (err, res) {
       if (err) throw err;
       cb(res);
@@ -31,7 +34,7 @@ class Orm {
   };
 
   removeOne(value, cb) {
-    // DELETE FROM `burgers_db`.`burgers` WHERE (`id` = '14');
+    //example: DELETE FROM `burgers_db`.`burgers` WHERE (`id` = '14');
     connection.query("DELETE FROM burgers_db.burgers WHERE ? ", [value], (err, res) => {
       if (err) throw err;
       cb(res);

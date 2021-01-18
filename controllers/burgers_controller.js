@@ -1,9 +1,10 @@
-const mysql = require("mysql");
-const config = require('../config/connection.js');
-const connection = mysql.createConnection(config);
+//const mysql = require("mysql");
+//const config = require('../config/connection.js');
+//const connection = mysql.createConnection(config);
 const express = require('express');
 const burger = require('../models/burger.js');
 const router = express.Router();
+const connection = require('../config/connection.js')
 
 router.get("/", function (req, res) {
   burger.showAll(function (data) {
@@ -12,7 +13,7 @@ router.get("/", function (req, res) {
 });
 
 //first param for post is the location of these preceding actions
-//START OF WORKING POST REQUEST(update devour value)
+//START OF WORKING POST REQUEST(add a new object)
 router.post("/new", (req, res, next) => {
   const data = req.body;
   res.json({
@@ -23,12 +24,13 @@ router.post("/new", (req, res, next) => {
   let burgerOne = req.body.name;
   connection.query(burger.addOne() + `('${burgerOne}')`, (err, res) => {
     if (err) throw err;
+    console.log(res);
   });
 
 });
 //END
 
-//Put Request for updating devour value 
+//PUT Request for updating devour value 
 router.put("/new/:id", function (req, res) {
 
   burger.changeOne({ devoured: 1 }, { id: req.params.id }, function (result) {
@@ -40,7 +42,7 @@ router.put("/new/:id", function (req, res) {
   });
 });
 
-//Put Request for deleting burger from DB 
+//PUT Request for deleting burger from DB 
 router.delete("/new/:id", function (req, res) {
   burger.deleteOne({ id: req.params.id }, function (result) {
     if (result.affectedRows == 0) {
