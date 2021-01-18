@@ -24,6 +24,12 @@ var burger = {
         //return console.log(burgerOne);
         const adding = new Orm();
         return adding.insertOne();
+    },
+    changeOne: (col, value, cb) => {
+        const adding = new Orm();
+        return adding.updateOne(col, value, function(res){
+                    cb(res);
+        })
     }
 };
 
