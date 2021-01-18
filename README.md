@@ -13,8 +13,8 @@ Project Live Link: https://all-u-can-burger.herokuapp.com/
 
 ## Table of contents
 - [Description](#Description)
-- [Usage](#Usage_Notes)
-- [Created By](#Created_By)
+- [Usage](#Usage-Notes)
+- [Created By](#Created-By)
 - [Repository Link](#Repository)
 
 ## Description 
