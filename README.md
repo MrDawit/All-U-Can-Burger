@@ -34,7 +34,6 @@ Project Live Link: https://all-u-can-burger.herokuapp.com/
 
 #### NPM Install, installs the following
 ![](https://camo.githubusercontent.com/e1840b4e176feb06e47500d5d74d65041ac3f193192174097956f2bea2ceea5f/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f2d4d7953514c2d4632393131313f7374796c653d666c61742d737175617265266c6f676f3d4d7953514c266c6f676f436f6c6f723d7768697465)
-![](https://img.shields.io/badge/-mysql-red)
 ![](https://img.shields.io/badge/-express-orange)
 ![](https://img.shields.io/badge/-expressHandlebars-blue)
 ![](https://img.shields.io/badge/-dotenv-purple)
