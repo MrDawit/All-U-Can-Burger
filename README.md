@@ -18,13 +18,13 @@ Project Live Link:
 - [Repository Link](#Repository)
 
 ## Description 
-  
+  An app to organize burger ideas whether they belong to your dreams or on the table!
    
 
-<img src="./assets/#" />
+<img src="./public/assets/img/AllUCanBurgerApp.gif" />
 
 
-<img src="./assets/#" width="600" height="296" />
+<img src="./public/assets/img/AllUCanBurger.png" width="600" height="296" />
 
 
 
