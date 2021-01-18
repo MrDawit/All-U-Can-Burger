@@ -1,11 +1,9 @@
 const mysql = require("mysql");
 const config = require('../config/connection.js');
 const connection = mysql.createConnection(config);
-
 const express = require('express');
 const burger = require('../models/burger.js');
 const router = express.Router();
-require('../models/burger.js');
 
 router.get("/", function (req, res) {
   burger.showAll(function (data) {

@@ -1,6 +1,4 @@
 const Orm = require('../config/orm');
-require("dotenv").config();
-require('../config/orm');
 
 //calling all Orm functions using burger specific inputs
 var burger = {

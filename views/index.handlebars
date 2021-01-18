@@ -7,7 +7,6 @@
         <div id="burgerList">
           {{!-- add EAT list items here--}}
 
-
           <ol>
             {{#each bestBurger}}
             {{#unless devoured}}
@@ -23,7 +22,6 @@
             {{/each}}
           </ol>
 
-
         </div>
       </div>
     </div>
@@ -33,6 +31,7 @@
         <div id="devourList">
 
           {{!-- add ATE list items here --}}
+          
           <ol>
             {{#each bestBurger}}
             {{#if devoured}}
@@ -55,12 +54,9 @@
   <div class="row">
     <div class="col-4"></div>
     <div class="col-4">
-      {{!-- method,action,name and type(submit) are all important parts of working post request --}}
       <form class="form-group" method="post" action="/new">
-
-
         <button type="submit" class="btn btn-primary btn-md" id="add-btn">
-          <span class="fa fa-book"></span> Add Ur Burger</button>
+          <span class="fas fa-hamburger"></span> Add Ur Burger</button>
         <input type="text" class="form-control" id="add" name="add" placeholder="Unique Burger Details" required>
         <label>To Hungry List</label>
       </form>
