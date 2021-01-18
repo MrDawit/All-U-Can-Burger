@@ -47,8 +47,12 @@ form  {
 }
 #add-btn{
     background:purple;
+    border-color:yellow;
+    border-top-left-radius: 40%;
+    border-top-right-radius: 40%;
 }
 #devourList{
     border-style: double;
     background-image: linear-gradient(to left, rgb(189, 5, 149) , yellow);
 }
+

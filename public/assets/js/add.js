@@ -28,25 +28,28 @@ $("#add-btn").on("click", (event) => {
 
     //calling async function
     clientSideBurger();
+
     console.log("We got a Add...js?");
+
+
+
 });
 
 
 console.log("We got a Add...js2?");
 
+//PUT request when "devour it" button is clicked
+$(".devour-btn").on("click", (event) => {
+    event.preventDefault();
+    var id = $(this).data("id");
 
-
-
-
-var id = $(this).data("id");
-
-$.ajax("/new/" + id, {
-    type: "PUT",
-}).then(
-    function () {
-        console.log("please, just a little bit more");
-        location.reload();
-    }
-);
-
+    $.ajax("/new/" + id, {
+        type: "PUT",
+    }).then(
+        function () {
+            console.log("please,just a little bit more");
+            location.reload();
+        }
+    );
+});
 
