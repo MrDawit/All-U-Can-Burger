@@ -7,18 +7,18 @@
 # All-U-Can-Burger
 ![](https://img.shields.io/badge/Made%20with-Javascript-green)
 ![](https://camo.githubusercontent.com/cec92673ea713fa89ba2ae2033daf5851f6f39393ff5b93231aa707d424638d9/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f2d4e6f64656a732d626c61636b3f7374796c653d666c61742d737175617265266c6f676f3d4e6f64652e6a73)   
-
+An app to organize burger ideas whether they belong to your dreams or on the table!
 
 Project Live Link: 
 
 ## Table of contents
 - [Description](#Description)
-- [Usage](#Usage)
+- [Usage](#Usage_Notes)
 - [Created By](#Created_By)
 - [Repository Link](#Repository)
 
 ## Description 
-  An app to organize burger ideas whether they belong to your dreams or on the table!
+  A simple app that lets you add burgers to a burger-list. Pressing the "Devour It!" button moves the burger to a different list anointing the burger eaten. Both lists have options to removing the burger from the page(and database).
    
 
 <img src="./public/assets/img/AllUCanBurgerApp.gif" />
