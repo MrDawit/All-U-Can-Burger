@@ -17,7 +17,7 @@ const mysql = require("mysql");
 };
 
 //test for heroku's jawsdb fix
-connection.connect();
+//connection.connect();
 
 
 module.exports = connection;
