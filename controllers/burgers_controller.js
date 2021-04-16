@@ -1,6 +1,4 @@
-//const mysql = require("mysql");
-//const config = require('../config/connection.js');
-//const connection = mysql.createConnection(config);
+
 const express = require('express');
 const burger = require('../models/burger.js');
 const router = express.Router();
@@ -12,8 +10,7 @@ router.get("/", function (req, res) {
   });
 });
 
-//first param for post is the location of these preceding actions
-//START OF WORKING POST REQUEST(add a new object)
+//START
 router.post("/new", (req, res, next) => {
   const data = req.body;
   res.json({
