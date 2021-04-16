@@ -1,8 +1,7 @@
  require("dotenv").config();
 const mysql = require("mysql");
 
-//when connection is NOT in an if condition, process of elimination shows it needs to be declared a const variable
-//when using dotenv
+//when connection is NOT in an if condition, process of elimination shows it needs to be declared a const variable when using dotenv
  if (process.env.JAWSDB_URL) {
   connection = mysql.createConnection(process.env.JAWSDB_URL);
 } else {
